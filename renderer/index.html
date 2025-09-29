@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>xoxo</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; frame-src https: http:;">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>xoxo – Web Data Updater</h1>
+    <div id="licenseBox">
+      <span id="trialInfo"></span>
+      <input id="licenseInput" placeholder="Licenční kód (min 12 znaků)"/>
+      <button id="btnSetLicense">Aktivovat</button>
+    </div>
+  </header>
+
+  <section class="controls">
+    <input id="urlInput" placeholder="https://... cílová stránka" />
+    <button id="btnOpen">Otevřít stránku</button>
+    <button id="btnPick">Vybrat prvek</button>
+    <button id="btnUpdate">Aktualizovat teď</button>
+    <input id="autoInterval" type="number" min="0" value="0" /> <span>s</span>
+    <button id="btnAutoStart">Auto start</button>
+    <button id="btnAutoStop">Auto stop</button>
+    <button id="btnExport">Export CSV</button>
+  </section>
+
+  <section class="addrow">
+    <input id="nameInput" placeholder="Název"/>
+    <input id="noteInput" placeholder="Poznámka"/>
+    <button id="btnAddRow">Přidat řádek (z posledního výběru)</button>
+    <span id="lastPickInfo"></span>
+  </section>
+
+  <section class="tablewrap">
+    <table id="tbl">
+      <thead>
+        <tr><th>Název</th><th>Poznámka</th><th>Hodnota</th><th class="small">URL</th><th class="small">Selector</th><th></th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="web">
+    <webview id="webv" preload="../selectionPreload.js" allowpopups></webview>
+  </section>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

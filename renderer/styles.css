@@ -1,0 +1,21 @@
+*{box-sizing:border-box;font-family:Segoe UI,Arial}
+body{margin:0;background:#0f1115;color:#e6e6e6}
+header{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:#161a22;border-bottom:1px solid #202533}
+h1{font-size:18px;margin:0}
+#licenseBox input{padding:6px 8px}
+#licenseBox button{margin-left:6px;padding:6px 10px}
+.controls,.addrow{display:flex;gap:8px;align-items:center;padding:8px 16px;border-bottom:1px solid #202533}
+.controls input#urlInput{flex:1;padding:6px 8px}
+.tablewrap{padding:10px 16px}
+table{width:100%;border-collapse:collapse}
+th,td{border-bottom:1px solid #202533;padding:8px 6px;vertical-align:top}
+td.small,th.small{font-size:11px;color:#9aa0aa;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.web{height:45vh;border-top:1px solid #202533}
+#webv{width:100%;height:100%;background:#fff}
+button{background:#2a3040;border:1px solid #3b4358;color:#e6e6e6;border-radius:6px;padding:6px 10px;cursor:pointer}
+button:hover{background:#333a52}
+input,textarea{background:#1a1f2b;border:1px solid #2b3142;color:#e6e6e6;border-radius:6px}
+#trialInfo{margin-right:8px;color:#ffc76b}
+.bad{color:#ff7a7a}
+.good{color:#6bffb0}
+.rowbtn{font-size:12px;padding:4px 8px}

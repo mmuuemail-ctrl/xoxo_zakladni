@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Browser</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      font-family: sans-serif;
+    }
+    #toolbar {
+      background: #333;
+      color: #fff;
+      padding: 5px;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+    #toolbar button { padding: 5px; }
+    #toolbar input { flex: 1; padding: 5px; }
+    #web {
+      flex: 1;          /* zabere zbytek obrazovky */
+      border: none;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- ✅ Toolbar -->
+  <div id="toolbar">
+    <button id="btnBack">←</button>
+    <button id="btnFwd">→</button>
+    <button id="btnReload">⟳</button>
+    <input id="address" placeholder="Zadej URL..." />
+    <button id="btnGo">Otevřít</button>
+    <button id="btnPick">Označit ON/OFF</button>
+    <button id="btnSave">Uložit</button>
+    <button id="btnClose">Zavřít</button>
+  </div>
+
+  <!-- ✅ Webview -->
+  <webview 
+    id="web"
+    src="about:blank"
+    allowpopups
+  ></webview>
+
+  <script src="browser.js"></script>
+</body>
+</html>
