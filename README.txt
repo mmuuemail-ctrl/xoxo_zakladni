@@ -18,3 +18,4 @@ Použití:
 Poznámky:
 - Přihlášení: přihlas se ve vloženém okně stránky.
 - Výběr prvku používá CSS selektor...
+funguje to?
